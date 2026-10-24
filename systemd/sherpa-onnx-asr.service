@@ -1,0 +1,27 @@
+# Optional user service for a NEW machine only. Never install over the Pi unit.
+# This server listens on 0.0.0.0:6006. This user unit does not isolate the port.
+# See docs/server-setup.md before enabling it.
+[Unit]
+Description=Local CPU Sherpa-ONNX offline ASR (Parakeet TDT 0.6B v3 int8)
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/local-dictate/server/sherpa-onnx-v1.13.8-linux-x64-static/bin/sherpa-onnx-offline-websocket-server \
+  --port=6006 \
+  --provider=cpu \
+  --num-work-threads=1 \
+  --num-threads=4 \
+  --num-io-threads=1 \
+  --max-batch-size=1 \
+  --encoder=%h/.local/share/local-dictate/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/encoder.int8.onnx \
+  --decoder=%h/.local/share/local-dictate/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/decoder.int8.onnx \
+  --joiner=%h/.local/share/local-dictate/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/joiner.int8.onnx \
+  --tokens=%h/.local/share/local-dictate/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/tokens.txt \
+  --log-file=/dev/null
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+UMask=0077
+
+[Install]
+WantedBy=default.target

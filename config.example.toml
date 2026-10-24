@@ -1,0 +1,14 @@
+# Copy to ~/.config/local-dictate/config.toml. All settings are optional.
+server_url = "ws://127.0.0.1:6006"
+# PulseAudio source name, passed as one parec --device argument.
+# source = "alsa_input.example"
+max_record_seconds = 120
+recognition_timeout = 30
+# auto tries wtype for a guarded Hyprland target, then falls back to wl-copy.
+# clipboard always copies. Clipboard managers may retain copied transcripts.
+output = "auto"
+# Temporary beta status feedback. Set false for silent hotkey-only dictation.
+notifications = true
+# Use a release binding. This delay reduces held-modifier risk but cannot
+# guarantee that every modifier has been released.
+insertion_delay_ms = 300

@@ -1,0 +1,38 @@
+# Copy to ~/.config/local-dictate/asr.toml. Editing does not restart the service.
+# v3 stays selected until Ultra provenance, int8 export, compatibility, resource
+# use, and recognition have been independently checked on this machine.
+active_model = "parakeet-v3-int8"
+
+[server]
+binary = "/home/nextg/Work/pi-dictate-local-runtime/server/sherpa-onnx-v1.13.8-linux-x64-static/bin/sherpa-onnx-offline-websocket-server"
+provider = "cpu"
+port = 6006
+# Preserve current shared-service concurrency for a model-only change.
+work_threads = 4
+threads = 8
+io_threads = 1
+max_batch_size = 5
+# Total readiness deadline. Each subprocess and WebSocket attempt is bounded.
+health_timeout = 60
+
+[models.parakeet-v3-int8]
+directory = "/home/nextg/Work/pi-dictate-local-runtime/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8"
+encoder = "encoder.int8.onnx"
+decoder = "decoder.int8.onnx"
+joiner = "joiner.int8.onnx"
+tokens = "tokens.txt"
+validated = true
+
+# Staging target, pending native and recognition validation. No download is
+# performed. Confirm filenames against the staged, verified export.
+[models.parakeet-ultra-int8]
+directory = "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff"
+encoder = "encoder.int8.onnx"
+decoder = "decoder.int8.onnx"
+joiner = "joiner.int8.onnx"
+tokens = "tokens.txt"
+# These settings were tested with the pinned export on native sherpa 1.13.8.
+# Verify local files and recognition before changing validated on another setup.
+feat_dim = 128
+model_type = "nemo_transducer"
+validated = false

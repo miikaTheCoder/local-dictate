@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+script=$(readlink -f -- "$0")
+repo=$(dirname -- "$(dirname -- "$script")")
+if [ -n "${LOCAL_DICTATE_PYTHON:-}" ]; then
+    python=$LOCAL_DICTATE_PYTHON
+elif [ -x "$repo/.venv/bin/python" ]; then
+    python=$repo/.venv/bin/python
+else
+    python=/usr/bin/python3
+fi
+exec "$python" "$repo/local_dictate.py" "$@"

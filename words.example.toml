@@ -1,0 +1,8 @@
+# Illustration only. This file is never loaded automatically.
+# Add rules deliberately with `local-dictate words add`, or edit words.toml.
+# An Orange rule also replaces references to the actual fruit.
+enabled = true
+
+[replacements]
+"Orange" = "Omarchy"
+# "New York" = "NYC"

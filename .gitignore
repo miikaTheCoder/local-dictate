@@ -1,0 +1,85 @@
+# Python development artifacts
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Downloaded models and native runtimes stay outside the source checkout.
+# Keep small provenance manifests and model documentation publishable.
+/models/*
+!/models/*.manifest.json
+!/models/*.md
+/downloads/
+/server/
+sherpa-onnx-v*-linux-*/
+sherpa-onnx-offline-websocket-server
+*.onnx
+*.onnx.data
+*.onnx_data
+*.safetensors
+*.nemo
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.so
+*.so.*
+*.a
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tgz
+*.tbz2
+*.zip
+*.part
+
+# Audio must not be published, including recordings and local test samples.
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.opus
+*.m4a
+*.aac
+*.pcm
+*.raw
+
+# Actual settings, dictionaries, backups, and transient session/recovery state.
+# config.example.toml, asr.example.toml, and words.example.toml remain included.
+config.toml
+config.toml.*
+asr.toml
+asr.toml.*
+words.toml
+words.toml.*
+/runtime/
+/state/
+/model-manager/
+*.lock
+*.pid
+*.sock
+state.json
+pending.json
+recovery.json
+.state-*
+*.log
+*.log.*
+/logs/
+
+# Local secrets and environment files, never required for offline inference.
+.env
+.env.*
+!.env.example
+*.env
+.netrc
+.git-credentials
+credentials.json
+/secrets/
+*.pem
+*.key
+*.p12
+*.pfx

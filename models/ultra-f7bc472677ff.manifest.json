@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "model_id": "parakeet-ultra-int8-f7bc472677ff",
+  "staged_at_utc": "2026-10-24T14:03:32.901004+00:00",
+  "model_directory": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff",
+  "activation_status": "staged_only_not_activated",
+  "export": {
+    "repository": "leogaudin/sherpa-onnx-nemo-parakeet-ultra-int8",
+    "revision": "f7bc472677ff70be95cdb0ef9df509fee6f5ec0b",
+    "tree_url": "https://huggingface.co/leogaudin/sherpa-onnx-nemo-parakeet-ultra-int8/tree/f7bc472677ff70be95cdb0ef9df509fee6f5ec0b",
+    "api_url": "https://huggingface.co/api/models/leogaudin/sherpa-onnx-nemo-parakeet-ultra-int8/revision/f7bc472677ff70be95cdb0ef9df509fee6f5ec0b?blobs=true",
+    "sha256sums_url": "https://huggingface.co/leogaudin/sherpa-onnx-nemo-parakeet-ultra-int8/resolve/f7bc472677ff70be95cdb0ef9df509fee6f5ec0b/SHA256SUMS",
+    "export_script_url": "https://huggingface.co/leogaudin/sherpa-onnx-nemo-parakeet-ultra-int8/resolve/f7bc472677ff70be95cdb0ef9df509fee6f5ec0b/export_ultra.py",
+    "export_script_sha256": "bdb071a788ef7a3d65791da40ad2b26c1e65f32fa75f1155c63741370058c2d6",
+    "export_script_executed": false
+  },
+  "source": {
+    "repository": "moondream/parakeet-ultra",
+    "revision": "73175eb7aeb0d82f1e2a6b53b3aabc10a90bcd0b",
+    "tree_url": "https://huggingface.co/moondream/parakeet-ultra/tree/73175eb7aeb0d82f1e2a6b53b3aabc10a90bcd0b",
+    "parameter_count_including_vad": 627270663,
+    "weights_sha256_from_lfs": "c9608f36d0ab956c14bfcc525479b0746b3b42a56f6949ec85c14eb7466717dc",
+    "weights_downloaded": false,
+    "base_model": "nvidia/parakeet-tdt-0.6b-v3",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "lineage": {
+    "converter": "leogaudin",
+    "mapping_claim": "723 recognition tensors mapped with shape and vocabulary checks; six auxiliary vad_head tensors omitted",
+    "transformation": "Transformers layout mapped into NeMo; ONNX export; dynamic uint8 encoder weight quantization and int8 decoder/joiner weight quantization; metadata URL includes lowercase tdt",
+    "source_revision_embedded_by_exporter": false,
+    "limitation": "The export script downloads upstream inputs without revision= and the transformation was not independently reproduced. The exact downloaded export bytes are pinned and verified; upstream lineage is a publisher claim supported by the audited script and source cards.",
+    "baseline_tokens_sha256_match": true
+  },
+  "total_model_bytes": 670576831,
+  "files": [
+    {
+      "name": "encoder.int8.onnx",
+      "path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/encoder.int8.onnx",
+      "url": "https://huggingface.co/leogaudin/sherpa-onnx-nemo-parakeet-ultra-int8/resolve/f7bc472677ff70be95cdb0ef9df509fee6f5ec0b/encoder.int8.onnx",
+      "size_bytes": 652282340,
+      "sha256": "8bd3b8dc07056def6dfd19910e9f90c9e1a4e7e20901f58bdfe2a570a8081a2a",
+      "git_blob_id": "c6c29a8c051547d6795d74db7c5000875ca21ee3",
+      "lfs_sha256": "8bd3b8dc07056def6dfd19910e9f90c9e1a4e7e20901f58bdfe2a570a8081a2a",
+      "published_checksum_match": true,
+      "metadata_size_match": true,
+      "lfs_sha256_match": true,
+      "post_validation_sha256_match": true
+    },
+    {
+      "name": "decoder.int8.onnx",
+      "path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/decoder.int8.onnx",
+      "url": "https://huggingface.co/leogaudin/sherpa-onnx-nemo-parakeet-ultra-int8/resolve/f7bc472677ff70be95cdb0ef9df509fee6f5ec0b/decoder.int8.onnx",
+      "size_bytes": 11845275,
+      "sha256": "94373c6405c8149d1c9d1e9862514e0e3e88dab1c7de18fac9d5df9c6ba5efdd",
+      "git_blob_id": "b0d64bd30f1bcf2f6d38a4ab3d5d25846a05f7b8",
+      "lfs_sha256": "94373c6405c8149d1c9d1e9862514e0e3e88dab1c7de18fac9d5df9c6ba5efdd",
+      "published_checksum_match": true,
+      "metadata_size_match": true,
+      "lfs_sha256_match": true,
+      "post_validation_sha256_match": true
+    },
+    {
+      "name": "joiner.int8.onnx",
+      "path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/joiner.int8.onnx",
+      "url": "https://huggingface.co/leogaudin/sherpa-onnx-nemo-parakeet-ultra-int8/resolve/f7bc472677ff70be95cdb0ef9df509fee6f5ec0b/joiner.int8.onnx",
+      "size_bytes": 6355277,
+      "sha256": "8a71aaccfdba3d451775507a889afd2257d2e754463fd81095a8c8f290f924c2",
+      "git_blob_id": "610ddf522426aa9966cad4f01359058db599b7be",
+      "lfs_sha256": "8a71aaccfdba3d451775507a889afd2257d2e754463fd81095a8c8f290f924c2",
+      "published_checksum_match": true,
+      "metadata_size_match": true,
+      "lfs_sha256_match": true,
+      "post_validation_sha256_match": true
+    },
+    {
+      "name": "tokens.txt",
+      "path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/tokens.txt",
+      "url": "https://huggingface.co/leogaudin/sherpa-onnx-nemo-parakeet-ultra-int8/resolve/f7bc472677ff70be95cdb0ef9df509fee6f5ec0b/tokens.txt",
+      "size_bytes": 93939,
+      "sha256": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d",
+      "git_blob_id": "fc43e1c723e262df60b70e1919614417162d1fe2",
+      "lfs_sha256": null,
+      "published_checksum_match": true,
+      "metadata_size_match": true,
+      "lfs_sha256_match": null,
+      "post_validation_sha256_match": true
+    }
+  ],
+  "attribution": "Moondream: Ultra weights. NVIDIA: Parakeet v3 architecture, tokenizer and base weights. leogaudin: community conversion and int8 export. sherpa-onnx: export recipe and native runtime (Apache-2.0). CC BY 4.0 model; conversion and omitted VAD head identified; no upstream endorsement.",
+  "validation": {
+    "status": "passed_native_cpu_smoke_test",
+    "activation_performed": false,
+    "native_cli_tests_passed": 4,
+    "cpu_int8_wer_measured": false,
+    "encoder_metadata": {
+      "version": "2",
+      "model_author": "NeMo",
+      "model_type": "EncDecRNNTBPEModel",
+      "feat_dim": "128",
+      "url": "https://huggingface.co/moondream/parakeet-ultra (tdt, trained from nvidia/parakeet-tdt-0.6b-v3)",
+      "subsampling_factor": "8",
+      "comment": "Only the transducer branch is exported",
+      "pred_hidden": "640",
+      "pred_rnn_layers": "2",
+      "normalize_type": "per_feature",
+      "vocab_size": "8192"
+    },
+    "joiner": {
+      "tdt_recognized": true,
+      "vocab_size_including_blank": 8193,
+      "num_durations": 5
+    },
+    "measurement_method": "Linux os.wait4 direct native child rusage.ru_maxrss (KiB), ru_utime, ru_stime; time.monotonic wall seconds. Requested GNU /usr/bin/time -v unavailable, no package installed.",
+    "tests": [
+      {
+        "language": "en",
+        "fixture": {
+          "path": "/home/nextg/Work/pi-dictate-local-runtime/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/test_wavs/en.wav",
+          "sha256": "148b936b43ce7c546a866e64da059f0458aee2d65e617f16e9d94f06e8d99ed6",
+          "sample_rate_hz": 24000,
+          "sample_width_bytes": 2,
+          "channels": 1,
+          "audio_seconds": 3.845083333333333
+        },
+        "argv": [
+          "/home/nextg/Work/pi-dictate-local-runtime/server/sherpa-onnx-v1.13.8-linux-x64-static/bin/sherpa-onnx-offline",
+          "--provider=cpu",
+          "--num-threads=8",
+          "--model-type=nemo_transducer",
+          "--feat-dim=128",
+          "--decoding-method=greedy_search",
+          "--sample-rate=16000",
+          "--debug=true",
+          "--tokens=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/tokens.txt",
+          "--encoder=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/encoder.int8.onnx",
+          "--decoder=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/decoder.int8.onnx",
+          "--joiner=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/joiner.int8.onnx",
+          "/home/nextg/Work/pi-dictate-local-runtime/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/test_wavs/en.wav"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "metrics": {
+          "wall_seconds": 1.949353,
+          "max_rss_kib": 1073448,
+          "max_rss_mib": 1048.2890625,
+          "user_cpu_seconds": 3.535357,
+          "system_cpu_seconds": 0.6334989999999999,
+          "major_page_faults": 0,
+          "minor_page_faults": 287573,
+          "voluntary_context_switches": 69,
+          "involuntary_context_switches": 687
+        },
+        "stdout_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/en.stdout.txt",
+        "stderr_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/en.stderr.txt",
+        "resources_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/en.resources.json",
+        "transcript": "Ask not what your country can do for you, ask what you can do for your country.",
+        "recognizer_creation_seconds": 1.627,
+        "native_decode_seconds": 0.25,
+        "native_decode_rtf": 0.065
+      },
+      {
+        "language": "de",
+        "fixture": {
+          "path": "/home/nextg/Work/pi-dictate-local-runtime/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/test_wavs/de.wav",
+          "sha256": "36d3c4845b9808a1656a2a2e92d884590e2db94389e6fe559643291ae0cd3710",
+          "sample_rate_hz": 22050,
+          "sample_width_bytes": 2,
+          "channels": 1,
+          "audio_seconds": 2.75156462585034
+        },
+        "argv": [
+          "/home/nextg/Work/pi-dictate-local-runtime/server/sherpa-onnx-v1.13.8-linux-x64-static/bin/sherpa-onnx-offline",
+          "--provider=cpu",
+          "--num-threads=8",
+          "--model-type=nemo_transducer",
+          "--feat-dim=128",
+          "--decoding-method=greedy_search",
+          "--sample-rate=16000",
+          "--debug=false",
+          "--tokens=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/tokens.txt",
+          "--encoder=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/encoder.int8.onnx",
+          "--decoder=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/decoder.int8.onnx",
+          "--joiner=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/joiner.int8.onnx",
+          "/home/nextg/Work/pi-dictate-local-runtime/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/test_wavs/de.wav"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "metrics": {
+          "wall_seconds": 1.857873,
+          "max_rss_kib": 1100668,
+          "max_rss_mib": 1074.87109375,
+          "user_cpu_seconds": 2.958173,
+          "system_cpu_seconds": 0.614968,
+          "major_page_faults": 0,
+          "minor_page_faults": 275500,
+          "voluntary_context_switches": 78,
+          "involuntary_context_switches": 456
+        },
+        "stdout_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/de.stdout.txt",
+        "stderr_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/de.stderr.txt",
+        "resources_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/de.resources.json",
+        "transcript": "Alles hat ein Ende, nur die Wurst hat zwei.",
+        "recognizer_creation_seconds": 1.609,
+        "native_decode_seconds": 0.172,
+        "native_decode_rtf": 0.063
+      },
+      {
+        "language": "es",
+        "fixture": {
+          "path": "/home/nextg/Work/pi-dictate-local-runtime/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/test_wavs/es.wav",
+          "sha256": "49fd2cfa4b62db7068143c582b35de9d31ec2733495ece3611105131d21de06c",
+          "sample_rate_hz": 22050,
+          "sample_width_bytes": 2,
+          "channels": 1,
+          "audio_seconds": 5.328979591836735
+        },
+        "argv": [
+          "/home/nextg/Work/pi-dictate-local-runtime/server/sherpa-onnx-v1.13.8-linux-x64-static/bin/sherpa-onnx-offline",
+          "--provider=cpu",
+          "--num-threads=8",
+          "--model-type=nemo_transducer",
+          "--feat-dim=128",
+          "--decoding-method=greedy_search",
+          "--sample-rate=16000",
+          "--debug=false",
+          "--tokens=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/tokens.txt",
+          "--encoder=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/encoder.int8.onnx",
+          "--decoder=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/decoder.int8.onnx",
+          "--joiner=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/joiner.int8.onnx",
+          "/home/nextg/Work/pi-dictate-local-runtime/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/test_wavs/es.wav"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "metrics": {
+          "wall_seconds": 1.917133,
+          "max_rss_kib": 1096984,
+          "max_rss_mib": 1071.2734375,
+          "user_cpu_seconds": 3.645243,
+          "system_cpu_seconds": 0.6071559999999999,
+          "major_page_faults": 0,
+          "minor_page_faults": 271998,
+          "voluntary_context_switches": 74,
+          "involuntary_context_switches": 379
+        },
+        "stdout_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/es.stdout.txt",
+        "stderr_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/es.stderr.txt",
+        "resources_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/es.resources.json",
+        "transcript": "No preguntes qué puede hacer tu país por ti, pregunta qué puedes hacer tú por tu país.",
+        "recognizer_creation_seconds": 1.587,
+        "native_decode_seconds": 0.256,
+        "native_decode_rtf": 0.048
+      },
+      {
+        "language": "fr",
+        "fixture": {
+          "path": "/home/nextg/Work/pi-dictate-local-runtime/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/test_wavs/fr.wav",
+          "sha256": "b59be4349b92d344fb903677165eaf4694025d1ab119c608726ecbcb3164b528",
+          "sample_rate_hz": 22050,
+          "sample_width_bytes": 2,
+          "channels": 1,
+          "audio_seconds": 4.96907029478458
+        },
+        "argv": [
+          "/home/nextg/Work/pi-dictate-local-runtime/server/sherpa-onnx-v1.13.8-linux-x64-static/bin/sherpa-onnx-offline",
+          "--provider=cpu",
+          "--num-threads=8",
+          "--model-type=nemo_transducer",
+          "--feat-dim=128",
+          "--decoding-method=greedy_search",
+          "--sample-rate=16000",
+          "--debug=false",
+          "--tokens=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/tokens.txt",
+          "--encoder=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/encoder.int8.onnx",
+          "--decoder=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/decoder.int8.onnx",
+          "--joiner=/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/joiner.int8.onnx",
+          "/home/nextg/Work/pi-dictate-local-runtime/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/test_wavs/fr.wav"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "metrics": {
+          "wall_seconds": 1.917784,
+          "max_rss_kib": 1108124,
+          "max_rss_mib": 1082.15234375,
+          "user_cpu_seconds": 3.663571,
+          "system_cpu_seconds": 0.6202329999999999,
+          "major_page_faults": 0,
+          "minor_page_faults": 277287,
+          "voluntary_context_switches": 72,
+          "involuntary_context_switches": 502
+        },
+        "stdout_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/fr.stdout.txt",
+        "stderr_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/fr.stderr.txt",
+        "resources_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/fr.resources.json",
+        "transcript": "Ne vous demandez pas ce que votre pays peut faire pour vous, demandez-vous plutôt ce que vous pouvez faire pour lui.",
+        "recognizer_creation_seconds": 1.586,
+        "native_decode_seconds": 0.258,
+        "native_decode_rtf": 0.052
+      }
+    ],
+    "service_before": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "1987",
+      "ExecMainStartTimestampMonotonic": "41918053"
+    },
+    "service_after": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "MainPID": "1987",
+      "ExecMainStartTimestampMonotonic": "41918053"
+    },
+    "service_unchanged": true,
+    "public_fixtures_only": true,
+    "command_timeout_seconds": 120,
+    "kill_after_seconds": 5,
+    "coredump_limit_bytes": 0,
+    "results_path": "/home/nextg/.local/share/local-dictate/models/parakeet-ultra-int8-f7bc472677ff/validation/results.json",
+    "results_sha256": "4332bfe83836535a147ff1d5ae1c47ba2f18eb7cef5162a64541198bcad92970",
+    "completed_at_utc": "2026-10-24T14:04:59.874729+00:00",
+    "limitations": [
+      "Four public clips establish native load and decoding compatibility, not WER improvement.",
+      "Each CLI process loads a fresh recognizer; OS page cache was not flushed. Startup-inclusive timing is not warm-server latency.",
+      "No WebSocket server was launched; service activation, protocol integration, TOML apply, and rollback remain coordinating-agent work.",
+      "The installed /usr/bin/time is absent; peak RSS and CPU usage come from direct-child Linux wait4, and elapsed time from time.monotonic. No GNU time -v measurement was made.",
+      "The existing v3 service ran concurrently; short-lived Ultra process RSS excludes that service and does not measure future server steady-state memory."
+    ]
+  },
+  "runtime": {
+    "executable": "/home/nextg/Work/pi-dictate-local-runtime/server/sherpa-onnx-v1.13.8-linux-x64-static/bin/sherpa-onnx-offline",
+    "executable_sha256": "db374bfbe8d10626181c583efe05fb60f28eb4dd1f3f79686024a77bd41748ca",
+    "sherpa_onnx_version": "1.13.8",
+    "sherpa_onnx_git_sha1": "11afbd00",
+    "onnxruntime_version": "1.28.2",
+    "provider": "cpu",
+    "num_threads": 8,
+    "model_type": "nemo_transducer",
+    "feat_dim": 128,
+    "sample_rate": 16000,
+    "decoding_method": "greedy_search",
+    "new_runtime_required": false,
+    "minimum_supported_version_established": false,
+    "note": "Validated with this installed native runtime only. Offline CLI help omits nemo_transducer from its model-type list, but this value was accepted and TDT recognition confirmed."
+  },
+  "provenance_files": [
+    {
+      "name": "provenance/SHA256SUMS",
+      "size_bytes": 410,
+      "sha256": "57a0b58af789d0d6521182ddd58e5c2aa8449bb3766c525aef9b5c242fb08026"
+    },
+    {
+      "name": "provenance/export-README.md",
+      "size_bytes": 4935,
+      "sha256": "f1ac0568e737172f270ce3797fc2dcc7ade0a5d76692664503b6d8291f5ef0bf"
+    },
+    {
+      "name": "provenance/export-api.json",
+      "size_bytes": 2405,
+      "sha256": "e07e851365e46f10967315560c441ed5b04787b60c5ed556c3c4946ea356811c"
+    },
+    {
+      "name": "provenance/export_ultra.py.txt",
+      "size_bytes": 10160,
+      "sha256": "bdb071a788ef7a3d65791da40ad2b26c1e65f32fa75f1155c63741370058c2d6"
+    },
+    {
+      "name": "provenance/source-README.md",
+      "size_bytes": 6433,
+      "sha256": "d4a8b60c83df734ea0373931ba9548f07bdcbab683d19c7f5777a6a83f0971c8"
+    },
+    {
+      "name": "provenance/source-api.json",
+      "size_bytes": 2003,
+      "sha256": "e4ebd7a8bc5922c1cab0e4ad40a0d0698ae3d9e2e6174853647f539f89de692b"
+    },
+    {
+      "name": "provenance/source-config.json",
+      "size_bytes": 1153,
+      "sha256": "e747b85e1bdfd300c8b8ac63bac8dd5221f8fe9bc275b48d06c735fcd6971b6e"
+    }
+  ],
+  "report_path": "/home/nextg/work/local-dictate/docs/ULTRA-NATIVE-VALIDATION.md"
+}
